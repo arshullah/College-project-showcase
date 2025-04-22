@@ -20,12 +20,12 @@ const mySchema = new Schema({
     },
     contributors: [
         {
-            type: mongoose.Schema.Types.ObjectId,
+            type: Schema.Types.ObjectId,
             ref: 'User', // Reference to your User model
             required: [true, 'Please specify at least one contributor.'],
         },
     ],
-   
+
     technologiesUsed: [
         {
             type: String,
@@ -40,7 +40,7 @@ const mySchema = new Schema({
             lowercase: true,
         },
     ],
-   
+
     sourceCodeUrl: {
         // Link to GitHub, GitLab, etc.
         type: String,
@@ -86,9 +86,9 @@ const mySchema = new Schema({
     // Add any other fields relevant to your showcase
     // e.g., awardsWon: [String], presentationDate: Date, etc.
 
-    timestamps: true,
 
 
-})
+
+}, { timestamps: true })
 
 module.exports = model('project', mySchema);

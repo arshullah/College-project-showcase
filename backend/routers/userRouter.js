@@ -38,9 +38,16 @@ router.get('/getbycourse/:course', (req, res) => {
         });
 });
 
+
+//get by email
 router.get('/getbyemail', (req, res) => {
-    res.send('response from user getbyemail');
-})
+    Model.find({email:req.params.email})
+    .then((result) => {
+        res.status(200).json(result);
+    }).catch((err) => {
+        res.status(500).json(err);
+    });
+});
 
 router.get('/getbyid/:id', (req, res) => {
     Model.findById(req.params.id)
