@@ -65,7 +65,7 @@ const ProductCard = ({
           </div>
         </div>
 
-        <Link href={"/project-details/" + _id}> Veiw Project</Link>
+        <Link className='bg-red-500' href={'/project-detail/'+_id}>View project</Link>
         <a
           href={sourceCodeUrl}
           target="_blank"
@@ -74,6 +74,8 @@ const ProductCard = ({
         >
           View Source Code
         </a>
+       
+        
       </div>
     </div>
   );
