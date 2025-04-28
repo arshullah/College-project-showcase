@@ -38,7 +38,7 @@ router.get('/getall',(req,res)=>{
 });
 
 //getbyid
-router.get('getbtid/:id',(req,res)=>{
+router.get('/getbyid/:id',(req,res)=>{
     Model.findById(req.params.id)
     .then((result) => {
         res.status(200).json(result);
@@ -47,7 +47,7 @@ router.get('getbtid/:id',(req,res)=>{
     });
 });
 //getbydepartment
-router.get('getbydepartment/:department',(req,res)=>{
+router.get('/getbydepartment/:department',(req,res)=>{
     Model.find({department : req.params.department})
     .then((result) => {
         res.status(200).json(result);
@@ -57,8 +57,8 @@ router.get('getbydepartment/:department',(req,res)=>{
 
 });
 // getbytitle
-router.get('getbytitle/:title',(req,res)=>{
-    Model.find({title:req.params.department})
+router.get('/getbytitle/:title',(req,res)=>{
+    Model.find({title:req.params.title})
     .then((result) => {
         res.status(200).json(result);
     }).catch((err) => {

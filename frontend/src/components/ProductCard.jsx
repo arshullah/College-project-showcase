@@ -1,7 +1,9 @@
 'use client'
+import Link from 'next/link';
 import React from 'react';
 
 const ProductCard = ({
+  _id,
   title,
   description,
   abstract,
@@ -63,6 +65,7 @@ const ProductCard = ({
           </div>
         </div>
 
+        <Link href={"/project-details/" + _id}> Veiw Project</Link>
         <a
           href={sourceCodeUrl}
           target="_blank"
