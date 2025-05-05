@@ -16,6 +16,7 @@ const ProjectDetail = () => {
       const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/project/getbyid/${id}`);
       setProject(res.data);
       setLoading(false);
+      
     } catch (error) {
       console.error('Error fetching project details:', error);
       setLoading(false);

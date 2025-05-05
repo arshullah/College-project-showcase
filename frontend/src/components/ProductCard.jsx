@@ -65,7 +65,8 @@ const ProductCard = ({
           </div>
         </div>
 
-        <Link className='bg-red-500' href={'/project-detail/'+_id}>View project</Link>
+        <Link className="w-48 text-center px-2 py-2 text-purple-600 font-bold border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300 cursor-pointer"
+         href={'/project-detail/'+_id}>View project</Link>
         <a
           href={sourceCodeUrl}
           target="_blank"
